@@ -59,3 +59,7 @@ package_list_advanced=(
     steam
     virtualbox
 )
+
+for name in "${package_list_core[@]}"; do
+    install_package $name
+done
