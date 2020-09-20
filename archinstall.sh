@@ -30,6 +30,7 @@ package_list_core=(
     pandoc
     pass
     pdftk
+    pkgconf
     python-pip
     python-virtualenv
     python-virtualenvwrapper
