@@ -14,6 +14,7 @@ package_list_core=(
     base
     cheese
     emacs
+    feh
     fzf
     gcc
     git
@@ -75,3 +76,23 @@ done
 for name in "${package_list_advanced[@]}"; do
     install_package $name
 done
+
+# TODO
+
+# git dwm
+# git st
+# git dmenu
+# git slock
+# git slstatus
+# install
+
+# git dotfiles
+# git wallpapers
+# git docs
+# git gtemp
+# git myblog
+# stow
+
+# python (ipython, numpy, scipy, pandas, matplotlib, chaospy, scikit-rf, scikit-learn, sympy)
+# ohmygzsh
+# emacs doom
