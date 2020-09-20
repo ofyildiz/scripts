@@ -11,21 +11,25 @@ install_package() {
 package_list_core=(
     alsa-utils
     arandr
+    base
     cheese
     emacs
     fzf
     gcc
     git
+    grub
     htop
     isync
-    libwacom
+    linux
+    linux-firmware
     make
+    man-db
+    man-pages
     neofetch
     networkmanager
     pandoc
     pass
     pdftk
-    python
     python-pip
     python-virtualenv
     python-virtualenvwrapper
@@ -34,12 +38,15 @@ package_list_core=(
     rsync
     ruby
     stow
+    sudo
+    texinfo
     texlive-most
     texlive-lang
     tmux
     vim
-    xf86-input-wacomk
+    xf86-input-wacom
     xorg
+    xorg-xinit
     zathura
     zsh
 )
@@ -61,5 +68,9 @@ package_list_advanced=(
 )
 
 for name in "${package_list_core[@]}"; do
+    install_package $name
+done
+
+for name in "${package_list_advanced[@]}"; do
     install_package $name
 done
