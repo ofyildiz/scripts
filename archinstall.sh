@@ -1,5 +1,6 @@
 #!/bin/sh
 
+cd ~
 install_package() {
     if pacman -Qi $1 &> /dev/null; then
         echo 'Package '$1' is already installed!'
@@ -67,7 +68,6 @@ package_list_advanced=(
     obs-studio
     remmina
     signal-desktop
-    steam
     virtualbox
 )
 
@@ -79,21 +79,35 @@ for name in "${package_list_advanced[@]}"; do
     install_package $name
 done
 
-# TODO
+git clone https://github.com/ofyildiz/dwm
+git clone https://github.com/ofyildiz/st
+git clone https://github.com/ofyildiz/dmenu
+git clone https://github.com/ofyildiz/slock
+git clone https://github.com/ofyildiz/slstatus
 
-# git dwm
-# git st
-# git dmenu
-# git slock
-# git slstatus
-# install
+cd ~/dwm
+sudo make clean install
+cd ~/st
+sudo make clean install
+cd ~/dmenu
+sudo make clean install
+cd ~/slock
+sudo make clean install
+cd ~/slstatus
+sudo make clean install
 
-# git dotfiles
-# git wallpapers
-# stow
-
+cd ~
+git clone https://github.com/ofyildiz/wallpapers
+git clone https://github.com/ofyildiz/dotfiles
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 
+cd ~/dotfiles
+stow git
+stow feh
+stow xinit
+stow doom
+
+cd ~
 # python (ipython, numpy, scipy, pandas, matplotlib, chaospy, scikit-rf, scikit-learn, sympy)
 # ohmygzsh
