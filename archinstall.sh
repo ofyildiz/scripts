@@ -111,4 +111,5 @@ stow doom
 
 cd ~
 # python (ipython, numpy, scipy, pandas, matplotlib, chaospy, scikit-rf, scikit-learn, sympy)
+chsh -s /bin/zsh
 # ohmygzsh
