@@ -14,6 +14,7 @@ package_list_core=(
     base
     cheese
     emacs
+    fd
     feh
     fzf
     gcc
@@ -37,6 +38,7 @@ package_list_core=(
     python-virtualenvwrapper
     qutebrowser
     ranger
+    ripgrep
     rsync
     ruby
     stow
@@ -88,11 +90,10 @@ done
 
 # git dotfiles
 # git wallpapers
-# git docs
-# git gtemp
-# git myblog
 # stow
+
+git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
 
 # python (ipython, numpy, scipy, pandas, matplotlib, chaospy, scikit-rf, scikit-learn, sympy)
 # ohmygzsh
-# emacs doom
