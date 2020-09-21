@@ -102,6 +102,7 @@ git clone https://github.com/ofyildiz/dotfiles
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 mv ~/.doom.d ~/.doom.d.bak
+export PATH=~/.emacs.d/bin:$PATH
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 mv ~/.zshrc ~/.zshrc.bak
 chsh -s /bin/zsh
