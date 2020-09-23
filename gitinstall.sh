@@ -22,11 +22,6 @@ for name in "${SUCKLESS_LIST[@]}"; do
     install_suckless $name
 done
 
-git clone $GIT_URL/wallpapers
-git clone $GIT_URL/dotfiles
-cd ~/dotfiles
-stow *
-
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 mv ~/.doom.d ~/.doom.d.bak
@@ -34,5 +29,10 @@ mv ~/.doom.d ~/.doom.d.bak
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 mv ~/.zshrc ~/.zshrc.bak
 chsh -s /bin/zsh
+
+git clone $GIT_URL/wallpapers ~/wallpapers
+git clone $GIT_URL/dotfiles ~/dotfiles
+cd ~/dotfiles
+stow *
 
 cd $CWD
