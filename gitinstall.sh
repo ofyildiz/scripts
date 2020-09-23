@@ -1,10 +1,12 @@
 #!/bin/sh
 
-git clone https://github.com/ofyildiz/dwm
-git clone https://github.com/ofyildiz/st
-git clone https://github.com/ofyildiz/dmenu
-git clone https://github.com/ofyildiz/slock
-git clone https://github.com/ofyildiz/slstatus
+CWD=$PWD
+
+git clone https://github.com/ofyildiz/dwm ~/dwm
+git clone https://github.com/ofyildiz/st ~/st
+git clone https://github.com/ofyildiz/dmenu ~/dmenu
+git clone https://github.com/ofyildiz/slock ~/slock
+git clone https://github.com/ofyildiz/slstatus ~/slstatus
 
 cd ~/dwm
 sudo make clean install
@@ -34,10 +36,4 @@ stow git
 stow xinit
 stow zsh
 
-cd ~
-export WORKON_HOME=~/virtualenvs
-mkdir -p $WORKON_HOME
-source /usr/bin/virtualenvwrapper.sh
-mkvirtualenv py3
-pip install ipython scipy numpy pandas matplotlib scikit-rf scikit-learn sympy chaospy
-deactivate
+cd $CWD

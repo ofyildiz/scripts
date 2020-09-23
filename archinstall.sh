@@ -77,9 +77,9 @@ echo "2) Advanced package list."
 echo "3) Full package list.\n"
 echo "Type respective number:"
 
-read choice
+read CHOICE
 
-case $choice in
+case $CHOICE in
     0)
         echo "Installation aborted.\n"
         ;;
