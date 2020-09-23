@@ -25,7 +25,7 @@ done
 git clone $GIT_URL/wallpapers
 git clone $GIT_URL/dotfiles
 cd ~/dotfiles
-stow --ignore=LICENSE --ignore=README.md *
+stow *
 
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
