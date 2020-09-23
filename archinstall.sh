@@ -3,7 +3,7 @@
 cd ~
 install_package() {
     if pacman -Qi $1 &> /dev/null; then
-        echo 'Package '$1' is already installed!'
+        echo "Package $1 is already installed!"
     else
         sudo pacman -S --noconfirm --needed $1
     fi
@@ -71,52 +71,38 @@ package_list_advanced=(
     virtualbox
 )
 
-for name in "${package_list_core[@]}"; do
-    install_package $name
-done
+echo "Select package list to be installed:\n"
+echo "0) Abort."
+echo "1) Core package list."
+echo "2) Advanced package list."
+echo "3) Full package list.\n"
+echo "Type respective number:"
 
-for name in "${package_list_advanced[@]}"; do
-    install_package $name
-done
+read choice
 
-git clone https://github.com/ofyildiz/dwm
-git clone https://github.com/ofyildiz/st
-git clone https://github.com/ofyildiz/dmenu
-git clone https://github.com/ofyildiz/slock
-git clone https://github.com/ofyildiz/slstatus
-
-cd ~/dwm
-sudo make clean install
-cd ~/st
-sudo make clean install
-cd ~/dmenu
-sudo make clean install
-cd ~/slock
-sudo make clean install
-cd ~/slstatus
-sudo make clean install
-
-cd ~
-git clone https://github.com/ofyildiz/wallpapers
-git clone https://github.com/ofyildiz/dotfiles
-git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
-~/.emacs.d/bin/doom install
-mv ~/.doom.d ~/.doom.d.bak
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-mv ~/.zshrc ~/.zshrc.bak
-chsh -s /bin/zsh
-
-cd ~/dotfiles
-stow doom
-stow feh
-stow git
-stow xinit
-stow zsh
-
-cd ~
-export WORKON_HOME=~/virtualenvs
-mkdir -p $WORKON_HOME
-source /usr/bin/virtualenvwrapper.sh
-mkvirtualenv py3
-pip install ipython scipy numpy pandas matplotlib scikit-rf scikit-learn sympy chaospy
-deactivate
+case $choice in
+    0)
+        echo "Installation aborted.\n"
+        ;;
+    1)
+        for name in "${package_list_core[@]}"; do
+            install_package $name
+        done
+        ;;
+    2)
+        for name in "${package_list_advanced[@]}"; do
+            install_package $name
+        done
+        ;;
+    3)
+        for name in "${package_list_core[@]}"; do
+            install_package $name
+        done
+        for name in "${package_list_advanced[@]}"; do
+            install_package $name
+        done
+        ;;
+    *)
+        echo "Wrong input. Please select correct number!\n"
+        ;;
+esac
