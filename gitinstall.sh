@@ -2,38 +2,37 @@
 
 CWD=$PWD
 
-git clone https://github.com/ofyildiz/dwm ~/dwm
-git clone https://github.com/ofyildiz/st ~/st
-git clone https://github.com/ofyildiz/dmenu ~/dmenu
-git clone https://github.com/ofyildiz/slock ~/slock
-git clone https://github.com/ofyildiz/slstatus ~/slstatus
+GIT_URL=https://github.com/ofyildiz
 
-cd ~/dwm
-sudo make clean install
-cd ~/st
-sudo make clean install
-cd ~/dmenu
-sudo make clean install
-cd ~/slock
-sudo make clean install
-cd ~/slstatus
-sudo make clean install
+install_suckless() {
+    git clone $GIT_URL/$1 ~/$1
+    cd ~/$1
+    sudo make clean install
+}
 
-cd ~
-git clone https://github.com/ofyildiz/wallpapers
-git clone https://github.com/ofyildiz/dotfiles
+SUCKLESS_LIST=(
+    dwm
+    st
+    dmenu
+    slock
+    slstatus
+)
+
+for name in "${SUCKLESS_LIST[@]}"; do
+    install_suckless $name
+done
+
+git clone $GIT_URL/wallpapers
+git clone $GIT_URL/dotfiles
+cd ~/dotfiles
+stow --ignore=LICENSE --ignore=README.md *
+
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 mv ~/.doom.d ~/.doom.d.bak
+
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 mv ~/.zshrc ~/.zshrc.bak
 chsh -s /bin/zsh
-
-cd ~/dotfiles
-stow doom
-stow feh
-stow git
-stow xinit
-stow zsh
 
 cd $CWD

@@ -8,7 +8,7 @@ install_package() {
     fi
 }
 
-package_list_core=(
+PACKAGE_LIST_CORE=(
     alsa-utils
     arandr
     base
@@ -55,7 +55,7 @@ package_list_core=(
     zsh
 )
 
-package_list_advanced=(
+PACKAGE_LIST_ADVANCED=(
     audacity
     firefox
     gimp
@@ -84,20 +84,20 @@ case $CHOICE in
         echo "Installation aborted.\n"
         ;;
     1)
-        for name in "${package_list_core[@]}"; do
+        for name in "${PACKAGE_LIST_CORE[@]}"; do
             install_package $name
         done
         ;;
     2)
-        for name in "${package_list_advanced[@]}"; do
+        for name in "${PACKAGE_LIST_ADVANCED[@]}"; do
             install_package $name
         done
         ;;
     3)
-        for name in "${package_list_core[@]}"; do
+        for name in "${PACKAGE_LIST_CORE[@]}"; do
             install_package $name
         done
-        for name in "${package_list_advanced[@]}"; do
+        for name in "${PACKAGE_LIST_ADVANCED[@]}"; do
             install_package $name
         done
         ;;
