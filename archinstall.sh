@@ -1,6 +1,5 @@
 #!/bin/sh
 
-cd ~
 install_package() {
     if pacman -Qi $1 &> /dev/null; then
         echo "Package $1 is already installed!"
