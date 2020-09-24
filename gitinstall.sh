@@ -30,8 +30,16 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 mv ~/.zshrc ~/.zshrc.bak
 chsh -s /bin/zsh
 
-git clone $GIT_URL/wallpapers ~/wallpapers
-git clone $GIT_URL/dotfiles ~/dotfiles
+GIT_LIST=(
+    dotfiles
+    org
+    wallpapers
+)
+
+for name in "${GIT_LIST[@]}"; do
+    git clone $GIT_URL/$name ~/$name
+done
+
 cd ~/dotfiles
 stow *
 
