@@ -35,4 +35,6 @@ git clone $GIT_URL/dotfiles ~/dotfiles
 cd ~/dotfiles
 stow *
 
+~/.emacs.d/bin/doom sync
+
 cd $CWD
