@@ -44,8 +44,8 @@ PACKAGE_LIST_CORE=(
     stow
     sudo
     texinfo
-    texlive-most
     texlive-lang
+    texlive-most
     tmux
     vim
     xf86-input-wacom

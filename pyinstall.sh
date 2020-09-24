@@ -13,15 +13,15 @@ install_pip() {
 }
 
 PIP_LIST=(
+    chaospy
     ipython
-    scipy
+    matplotlib
     numpy
     pandas
-    matplotlib
-    scikit-rf
     scikit-learn
+    scikit-rf
+    scipy
     sympy
-    chaospy
 )
 
 for name in "${PIP_LIST[@]}"; do
