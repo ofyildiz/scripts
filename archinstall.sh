@@ -16,6 +16,7 @@ PACKAGE_LIST_CORE=(
     emacs
     fd
     feh
+    freerdp
     fzf
     gcc
     git
@@ -52,6 +53,7 @@ PACKAGE_LIST_CORE=(
     xorg
     xorg-xinit
     zathura
+    zathura-pdf-mupdf
     zsh
 )
 
