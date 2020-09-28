@@ -12,20 +12,19 @@ PACKAGE_LIST_CORE=(
     alsa-utils
     arandr
     base
+    base-devel
     cheese
     emacs
     fd
     feh
     freerdp
     fzf
-    gcc
     git
     grub
     htop
     isync
     linux
     linux-firmware
-    make
     man-db
     man-pages
     neofetch
@@ -43,8 +42,6 @@ PACKAGE_LIST_CORE=(
     rsync
     ruby
     stow
-    sudo
-    texinfo
     texlive-lang
     texlive-most
     tmux
