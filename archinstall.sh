@@ -45,6 +45,8 @@ PACKAGE_LIST_CORE=(
     texlive-lang
     texlive-most
     tmux
+    unrar
+    unzip
     vim
     xf86-input-wacom
     xorg
