@@ -45,6 +45,7 @@ PACKAGE_LIST_CORE=(
     texlive-lang
     texlive-most
     tmux
+    ttf-liberation
     unrar
     unzip
     vim
@@ -71,11 +72,19 @@ PACKAGE_LIST_ADVANCED=(
     virtualbox
 )
 
-echo "Select package list to be installed:\n"
+PACKAGE_LIST_EXTRA=(
+    desmume
+    pcsx2
+    steam
+    vbam-wx
+)
+
+echo "Select package list to be installed:"
 echo "0) Abort."
 echo "1) Core package list."
 echo "2) Advanced package list."
-echo "3) Full package list.\n"
+echo "3) Extra package list."
+echo "4) Full package list."
 echo "Type respective number:"
 
 read CHOICE
@@ -88,6 +97,7 @@ case $CHOICE in
         for name in "${PACKAGE_LIST_CORE[@]}"; do
             install_package $name
         done
+        xdg-mime default org.pwmt.zathura.desktop application/pdf
         ;;
     2)
         for name in "${PACKAGE_LIST_ADVANCED[@]}"; do
