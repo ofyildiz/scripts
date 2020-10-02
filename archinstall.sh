@@ -106,3 +106,5 @@ case $CHOICE in
         echo "Wrong input. Please select correct number!\n"
         ;;
 esac
+
+xdg-mime default org.pwmt.zathura.desktop application/pdf
