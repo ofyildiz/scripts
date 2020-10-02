@@ -13,6 +13,7 @@ PACKAGE_LIST_CORE=(
     arandr
     base
     base-devel
+    brightnessctl
     cheese
     emacs
     fd
