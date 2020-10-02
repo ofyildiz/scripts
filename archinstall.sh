@@ -95,10 +95,27 @@ case $CHOICE in
         done
         ;;
     3)
+        echo "[multilib]" >> /etc/pacman.conf
+        echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
+        sudo pacman -Sl --noconfirm --needed multilib
+        for name in "${PACKAGE_LIST_EXTRA[@]}"; do
+            install_package $name
+        done
+        ;;
+    4)
         for name in "${PACKAGE_LIST_CORE[@]}"; do
             install_package $name
         done
+        xdg-mime default org.pwmt.zathura.desktop application/pdf
+
         for name in "${PACKAGE_LIST_ADVANCED[@]}"; do
+            install_package $name
+        done
+
+        echo "[multilib]" >> /etc/pacman.conf
+        echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
+        sudo pacman -Sl --noconfirm --needed multilib
+        for name in "${PACKAGE_LIST_EXTRA[@]}"; do
             install_package $name
         done
         ;;
@@ -106,5 +123,3 @@ case $CHOICE in
         echo "Wrong input. Please select correct number!\n"
         ;;
 esac
-
-xdg-mime default org.pwmt.zathura.desktop application/pdf
