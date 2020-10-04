@@ -76,6 +76,7 @@ PACKAGE_LIST_ADVANCED=(
 PACKAGE_LIST_EXTRA=(
     desmume
     dolphin-emu
+    mupen64plus
     pcsx2
     steam
     vbam-wx
