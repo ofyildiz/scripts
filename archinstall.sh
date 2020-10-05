@@ -44,6 +44,7 @@ PACKAGE_LIST_CORE=(
     stow
     texlive-lang
     texlive-most
+    tk
     tmux
     vim
     xf86-input-wacom
