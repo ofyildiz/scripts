@@ -13,6 +13,7 @@ PACKAGE_LIST_CORE=(
     arandr
     base
     base-devel
+    brightnessctl
     cheese
     emacs
     fd
@@ -46,6 +47,9 @@ PACKAGE_LIST_CORE=(
     texlive-most
     tk
     tmux
+    ttf-liberation
+    unrar
+    unzip
     vim
     xf86-input-wacom
     xorg
@@ -70,11 +74,21 @@ PACKAGE_LIST_ADVANCED=(
     virtualbox
 )
 
-echo "Select package list to be installed:\n"
+PACKAGE_LIST_EXTRA=(
+    desmume
+    dolphin-emu
+    mupen64plus
+    pcsx2
+    steam
+    vbam-wx
+)
+
+echo "Select package list to be installed:"
 echo "0) Abort."
 echo "1) Core package list."
 echo "2) Advanced package list."
-echo "3) Full package list.\n"
+echo "3) Extra package list."
+echo "4) Full package list."
 echo "Type respective number:"
 
 read CHOICE
@@ -87,6 +101,7 @@ case $CHOICE in
         for name in "${PACKAGE_LIST_CORE[@]}"; do
             install_package $name
         done
+        xdg-mime default org.pwmt.zathura.desktop application/pdf
         ;;
     2)
         for name in "${PACKAGE_LIST_ADVANCED[@]}"; do
@@ -94,10 +109,27 @@ case $CHOICE in
         done
         ;;
     3)
+        echo "[multilib]" >> /etc/pacman.conf
+        echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
+        sudo pacman -Sl --noconfirm --needed multilib
+        for name in "${PACKAGE_LIST_EXTRA[@]}"; do
+            install_package $name
+        done
+        ;;
+    4)
         for name in "${PACKAGE_LIST_CORE[@]}"; do
             install_package $name
         done
+        xdg-mime default org.pwmt.zathura.desktop application/pdf
+
         for name in "${PACKAGE_LIST_ADVANCED[@]}"; do
+            install_package $name
+        done
+
+        echo "[multilib]" >> /etc/pacman.conf
+        echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
+        sudo pacman -Sl --noconfirm --needed multilib
+        for name in "${PACKAGE_LIST_EXTRA[@]}"; do
             install_package $name
         done
         ;;
