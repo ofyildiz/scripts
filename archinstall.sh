@@ -95,7 +95,7 @@ read CHOICE
 
 case $CHOICE in
     0)
-        echo "Installation aborted.\n"
+        echo "Installation aborted."
         ;;
     1)
         for name in "${PACKAGE_LIST_CORE[@]}"; do
@@ -134,6 +134,6 @@ case $CHOICE in
         done
         ;;
     *)
-        echo "Wrong input. Please select correct number!\n"
+        echo "Wrong input. Please select correct number!"
         ;;
 esac
