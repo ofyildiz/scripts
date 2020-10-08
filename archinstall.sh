@@ -22,6 +22,7 @@ PACKAGE_LIST_CORE=(
     freerdp
     fzf
     git
+    gmime3
     grub
     htop
     isync
@@ -52,6 +53,7 @@ PACKAGE_LIST_CORE=(
     unrar
     unzip
     vim
+    xapian-core
     xf86-input-wacom
     xorg
     xorg-xinit

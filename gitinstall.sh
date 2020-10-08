@@ -2,6 +2,7 @@
 
 CWD=$PWD
 
+# install suckless utilities
 GIT_URL=https://github.com/ofyildiz
 
 install_suckless() {
@@ -22,14 +23,23 @@ for name in "${SUCKLESS_LIST[@]}"; do
     install_suckless $name
 done
 
+# install doom emacs
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 mv ~/.doom.d ~/.doom.d.bak
 
+# install ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 mv ~/.zshrc ~/.zshrc.bak
 chsh -s /bin/zsh
 
+# install mu/mu4e
+git clone https://github.com/djcb/mu.git ~/mu
+cd ~/mu
+autoreconf -i && ./configure && make
+sudo make install
+
+# install public git repositories
 GIT_LIST=(
     dotfiles
     wallpapers
