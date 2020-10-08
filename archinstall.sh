@@ -15,6 +15,7 @@ PACKAGE_LIST_CORE=(
     base-devel
     brightnessctl
     cheese
+    cmake
     emacs
     fd
     feh
