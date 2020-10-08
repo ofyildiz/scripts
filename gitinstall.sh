@@ -32,7 +32,6 @@ chsh -s /bin/zsh
 
 GIT_LIST=(
     dotfiles
-    org
     wallpapers
 )
 
