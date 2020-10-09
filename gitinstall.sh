@@ -33,13 +33,6 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 mv ~/.zshrc ~/.zshrc.bak
 chsh -s /bin/zsh
 
-# install mu/mu4e
-git clone https://github.com/djcb/mu.git ~/mu
-cd ~/mu
-autoreconf -i && ./configure && make
-sudo make install
-mkdir -p ~/.mail/tuhh
-
 # install public git repositories
 GIT_LIST=(
     dotfiles
@@ -54,7 +47,5 @@ cd ~/dotfiles
 stow *
 
 ~/.emacs.d/bin/doom sync
-mbsync -a
-mu init --maildir=~/.mail/tuhh --my-address=oemer.yildiz@tuhh.de
 
 cd $CWD
