@@ -38,6 +38,7 @@ git clone https://github.com/djcb/mu.git ~/mu
 cd ~/mu
 autoreconf -i && ./configure && make
 sudo make install
+mkdir -p ~/.mail/tuhh
 
 # install public git repositories
 GIT_LIST=(
@@ -53,5 +54,7 @@ cd ~/dotfiles
 stow *
 
 ~/.emacs.d/bin/doom sync
+mbsync -a
+mu init --maildir=~/.mail/tuhh --my-address=oemer.yildiz@tuhh.de
 
 cd $CWD
