@@ -75,6 +75,7 @@ PACKAGE_LIST_ADVANCED=(
     remmina
     signal-desktop
     virtualbox
+    vlc
 )
 
 PACKAGE_LIST_EXTRA=(
