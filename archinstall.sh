@@ -28,6 +28,7 @@ PACKAGE_LIST_CORE=(
     isync
     linux
     linux-firmware
+    lshw
     man-db
     man-pages
     neofetch
