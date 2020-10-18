@@ -20,6 +20,7 @@ PACKAGE_LIST_CORE=(
     fd
     feh
     freerdp
+    fuse
     fzf
     git
     gmime3
@@ -33,6 +34,7 @@ PACKAGE_LIST_CORE=(
     man-pages
     neofetch
     networkmanager
+    ntfs-3g
     pandoc
     pass
     pdftk
