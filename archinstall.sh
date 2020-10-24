@@ -75,6 +75,7 @@ PACKAGE_LIST_ADVANCED=(
     libreoffice-fresh
     lmms
     obs-studio
+    okular
     remmina
     signal-desktop
     virtualbox
@@ -116,8 +117,8 @@ case $CHOICE in
         done
         ;;
     3)
-        echo "[multilib]" >> /etc/pacman.conf
-        echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
+        sudo echo "[multilib]" >> /etc/pacman.conf
+        sudo echo "Include = /etc/pacman.d/mirrorlist" >> /etc/pacman.conf
         sudo pacman -Sl --noconfirm --needed multilib
         for name in "${PACKAGE_LIST_EXTRA[@]}"; do
             install_package $name
