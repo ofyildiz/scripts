@@ -110,6 +110,7 @@ case $CHOICE in
         for name in "${PACKAGE_LIST_CORE[@]}"; do
             install_package $name
         done
+        systemctl --user enable --now emacs
         systemctl enable NetworkManager
         xdg-mime default org.pwmt.zathura.desktop application/pdf
         ;;
