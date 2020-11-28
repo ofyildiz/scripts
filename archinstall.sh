@@ -22,6 +22,7 @@ PACKAGE_LIST_CORE=(
     freerdp
     fuse
     fzf
+    ghostscript
     git
     gmime3
     grub
