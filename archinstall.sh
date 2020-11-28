@@ -13,6 +13,7 @@ PACKAGE_LIST_CORE=(
     arandr
     base
     base-devel
+    bcprov
     brightnessctl
     cheese
     cmake
@@ -28,6 +29,7 @@ PACKAGE_LIST_CORE=(
     grub
     htop
     isync
+    java-commons-lang
     linux
     linux-firmware
     lshw
