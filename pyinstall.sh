@@ -16,6 +16,7 @@ PIP_LIST=(
     matplotlib
     numpy
     pandas
+    pygame
     scikit-learn
     scikit-rf
     scipy
