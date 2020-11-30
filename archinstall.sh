@@ -59,6 +59,7 @@ PACKAGE_LIST_CORE=(
     unrar
     unzip
     vim
+    w3m
     wget
     xapian-core
     xf86-input-wacom
