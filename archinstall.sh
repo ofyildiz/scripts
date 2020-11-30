@@ -49,8 +49,8 @@ PACKAGE_LIST_CORE=(
     ranger
     ripgrep
     rsync
-    ruby
     stow
+    sxiv
     texlive-lang
     texlive-most
     tk
