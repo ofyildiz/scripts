@@ -81,6 +81,7 @@ PACKAGE_LIST_ADVANCED=(
     lmms
     obs-studio
     okular
+    pcmanfm
     remmina
     signal-desktop
     virtualbox
