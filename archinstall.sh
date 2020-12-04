@@ -15,11 +15,12 @@ PACKAGE_LIST_CORE=(
     base-devel
     bcprov
     brightnessctl
-    cheese
     cmake
+    cmus
     emacs
     fd
     feh
+    ffmpeg
     freerdp
     fuse
     fzf
@@ -65,6 +66,7 @@ PACKAGE_LIST_CORE=(
     xf86-input-wacom
     xorg
     xorg-xinit
+    youtube-dl
     zathura
     zathura-pdf-mupdf
     zsh
