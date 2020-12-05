@@ -36,6 +36,7 @@ PACKAGE_LIST_CORE=(
     lshw
     man-db
     man-pages
+    mpv
     neofetch
     networkmanager
     ntfs-3g
