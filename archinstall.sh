@@ -39,6 +39,8 @@ PACKAGE_LIST_CORE=(
     mpv
     neofetch
     networkmanager
+    network-manager-applet
+    nm-connection-editor
     ntfs-3g
     pandoc
     pass
