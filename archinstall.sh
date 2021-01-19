@@ -24,10 +24,12 @@ PACKAGE_LIST_CORE=(
     freerdp
     fuse
     fzf
+    gcc-fortran
     ghostscript
     git
     gmime3
     grub
+    hdf5
     htop
     isync
     java-commons-lang
