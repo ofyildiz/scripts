@@ -28,6 +28,14 @@ git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 mv ~/.doom.d ~/.doom.d.bak
 
+# install ticker
+curl -Ls https://api.github.com/repos/achannarasappa/ticker/releases/latest \
+| grep -wo "https.*linux-amd64*.tar.gz" \
+| wget -qi - \
+&& tar -xf ticker*.tar.gz \
+&& chmod +x ./ticker \
+&& sudo mv ticker /usr/local/bin/
+
 # install ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 mv ~/.zshrc ~/.zshrc.bak
