@@ -44,6 +44,7 @@ PACKAGE_LIST_CORE=(
     network-manager-applet
     nm-connection-editor
     ntfs-3g
+    openscad
     pandoc
     pass
     pdftk
@@ -80,6 +81,7 @@ PACKAGE_LIST_CORE=(
 PACKAGE_LIST_ADVANCED=(
     audacity
     firefox
+    freecad
     gimp
     inkscape
     kdenlive
