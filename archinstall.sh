@@ -63,6 +63,7 @@ PACKAGE_LIST_CORE=(
     tk
     tmux
     ttf-liberation
+    ttf-arphic-ukai
     unrar
     unzip
     vim
