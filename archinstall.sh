@@ -11,6 +11,8 @@ install_package() {
 PACKAGE_LIST_CORE=(
     alsa-utils
     arandr
+    aspell-de
+    aspell-en
     base
     base-devel
     bcprov
