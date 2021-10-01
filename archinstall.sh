@@ -72,6 +72,7 @@ PACKAGE_LIST_CORE=(
     w3m
     wget
     xapian-core
+    xclip
     xf86-input-wacom
     xorg
     xorg-xinit
