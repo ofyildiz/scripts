@@ -47,6 +47,7 @@ PACKAGE_LIST_CORE=(
     nm-connection-editor
     ntfs-3g
     openscad
+    pacman
     pandoc
     pass
     pdftk
@@ -59,6 +60,7 @@ PACKAGE_LIST_CORE=(
     ripgrep
     rsync
     stow
+    sudo
     sxiv
     texlive-lang
     texlive-most
