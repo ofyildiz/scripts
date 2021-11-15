@@ -30,6 +30,7 @@ PACKAGE_LIST_CORE=(
     ghostscript
     git
     gmime3
+    gnuplot
     grub
     hdf5
     htop
@@ -44,6 +45,7 @@ PACKAGE_LIST_CORE=(
     neofetch
     networkmanager
     network-manager-applet
+    ngspice
     nm-connection-editor
     ntfs-3g
     openscad
@@ -106,6 +108,7 @@ PACKAGE_LIST_ADVANCED=(
 PACKAGE_LIST_EXTRA=(
     desmume
     dolphin-emu
+    higan
     mupen64plus
     pcsx2
     steam
@@ -151,6 +154,8 @@ case $CHOICE in
         for name in "${PACKAGE_LIST_CORE[@]}"; do
             install_package $name
         done
+        systemctl --user enable --now emacs
+        systemctl enable NetworkManager
         xdg-mime default org.pwmt.zathura.desktop application/pdf
 
         for name in "${PACKAGE_LIST_ADVANCED[@]}"; do
