@@ -11,6 +11,7 @@ install_package() {
 PACKAGE_LIST_CORE=(
     alsa-utils
     arandr
+    arduino-cli
     aspell-de
     aspell-en
     base
@@ -133,6 +134,7 @@ case $CHOICE in
         for name in "${PACKAGE_LIST_CORE[@]}"; do
             install_package $name
         done
+        arduino-cli config init
         systemctl --user enable --now emacs
         systemctl enable NetworkManager
         xdg-mime default org.pwmt.zathura.desktop application/pdf
@@ -154,6 +156,7 @@ case $CHOICE in
         for name in "${PACKAGE_LIST_CORE[@]}"; do
             install_package $name
         done
+        arduino-cli config init
         systemctl --user enable --now emacs
         systemctl enable NetworkManager
         xdg-mime default org.pwmt.zathura.desktop application/pdf
