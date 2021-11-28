@@ -136,6 +136,7 @@ case $CHOICE in
         done
         arduino-cli config init
         arduino-cli core update-index
+        arduino-cli core install arduino:avr
         systemctl --user enable --now emacs
         systemctl enable NetworkManager
         xdg-mime default org.pwmt.zathura.desktop application/pdf
@@ -159,6 +160,7 @@ case $CHOICE in
         done
         arduino-cli config init
         arduino-cli core update-index
+        arduino-cli core install arduino:avr
         systemctl --user enable --now emacs
         systemctl enable NetworkManager
         xdg-mime default org.pwmt.zathura.desktop application/pdf
