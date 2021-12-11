@@ -37,6 +37,9 @@ PACKAGE_LIST_CORE=(
     htop
     isync
     java-commons-lang
+    kicad
+    kicad-library
+    kicad-library-3d
     linux
     linux-firmware
     lshw
