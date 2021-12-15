@@ -57,6 +57,7 @@ PACKAGE_LIST_CORE=(
     pandoc
     pass
     pdftk
+    peek
     pkgconf
     python-pip
     python-virtualenv
@@ -65,6 +66,7 @@ PACKAGE_LIST_CORE=(
     ranger
     ripgrep
     rsync
+    shutter
     stow
     sudo
     sxiv
