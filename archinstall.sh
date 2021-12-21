@@ -51,6 +51,7 @@ PACKAGE_LIST_CORE=(
     network-manager-applet
     ngspice
     nm-connection-editor
+    npm
     ntfs-3g
     openscad
     pacman

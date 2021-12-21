@@ -28,6 +28,12 @@ git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 mv ~/.doom.d ~/.doom.d.bak
 
+# install orca
+git clone https://github.com/hundredrabbits/Orca.git ~/Orca
+cd ~/Orca/desktop/
+npm install
+cd ~
+
 # install ticker
 curl -Ls https://api.github.com/repos/achannarasappa/ticker/releases/latest \
 | grep -wo "https.*linux-amd64*.tar.gz" \
