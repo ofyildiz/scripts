@@ -28,11 +28,19 @@ git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 mv ~/.doom.d ~/.doom.d.bak
 
-# install orca
+# install orca (c99 in terminal)
+git clone https://github.com/hundredrabbits/Orca-c.git ~/Orca-c
+cd ~/Orca-c
+make
+
+# install orca (javascript with electron)
 git clone https://github.com/hundredrabbits/Orca.git ~/Orca
 cd ~/Orca/desktop/
 npm install
 cd ~
+
+# install orca examples
+git clone https://git.sr.ht/~rabbits/orca-examples ~/Orca-examples
 
 # install ticker
 curl -Ls https://api.github.com/repos/achannarasappa/ticker/releases/latest \
