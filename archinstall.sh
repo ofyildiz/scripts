@@ -14,6 +14,7 @@ PACKAGE_LIST_CORE=(
     arduino-cli
     aspell-de
     aspell-en
+    asymptote
     base
     base-devel
     bcprov
