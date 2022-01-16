@@ -91,6 +91,7 @@ PACKAGE_LIST_CORE=(
     youtube-dl
     zathura
     zathura-pdf-mupdf
+    zenity
     zsh
 )
 

@@ -50,6 +50,11 @@ curl -Ls https://api.github.com/repos/achannarasappa/ticker/releases/latest \
 && chmod +x ./ticker \
 && sudo mv ticker /usr/local/bin/
 
+# install VCV Rack 2
+mkdir ~/VCV
+wget https://vcvrack.com/downloads/RackFree-2.0.5-lin.zip -O ~/VCV/RackFree-2.0.5-lin.zip
+unzip ~/VCV/RackFree-2.0.5-lin.zip -d ~/VCV/
+
 # install ohmyzsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 mv ~/.zshrc ~/.zshrc.bak
