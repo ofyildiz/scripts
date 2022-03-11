@@ -12,6 +12,7 @@ mkvirtualenv py3
 
 PIP_LIST=(
     chaospy
+    control
     ipython
     matplotlib
     numpy
