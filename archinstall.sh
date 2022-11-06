@@ -54,6 +54,7 @@ PACKAGE_LIST_CORE=(
     nm-connection-editor
     npm
     ntfs-3g
+    nyxt
     octave
     openscad
     pacman
@@ -70,6 +71,7 @@ PACKAGE_LIST_CORE=(
     ripgrep
     rsync
     shutter
+    sqlitebrowser
     stow
     sudo
     sxiv
