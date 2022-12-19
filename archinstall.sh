@@ -54,6 +54,7 @@ PACKAGE_LIST_CORE=(
     nm-connection-editor
     npm
     ntfs-3g
+    nvtop
     nyxt
     octave
     openscad
