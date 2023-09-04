@@ -21,7 +21,11 @@ PACKAGE_LIST_CORE=(
     brightnessctl
     cmake
     cmus
+    doxygen
     emacs
+    # update 230904: for doom emacs
+    # update 230904: test first
+    # emacs-nativecomp
     fd
     feh
     ffmpeg

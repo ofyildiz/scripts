@@ -27,6 +27,14 @@ done
 git clone --depth 1 https://github.com/hlissner/doom-emacs ~/.emacs.d
 ~/.emacs.d/bin/doom install
 mv ~/.doom.d ~/.doom.d.bak
+# update 230904: install doom emacs
+# update 230904: test first
+# git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+# ~/.config/emacs/bin/doom install
+# mv ~/.doom.d ~/.doom.d.bak
+# export PATH=~/.config/emacs/bin:$PATH
+# mv ~/.emacs.d ~/.emacs.d.bak
+# cp -l ~/.config/emacs ~/.emacs.d
 
 # install orca (c99 in terminal)
 git clone https://github.com/hundredrabbits/Orca-c.git ~/Orca-c
@@ -74,5 +82,8 @@ cd ~/dotfiles
 stow *
 
 ~/.emacs.d/bin/doom sync
+# update 230904: install doom emacs
+# update 230904: test first
+# doom sync
 
 cd $CWD
