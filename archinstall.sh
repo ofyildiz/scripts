@@ -51,6 +51,7 @@ PACKAGE_LIST_CORE=(
     man-db
     man-pages
     mpv
+    musescore
     neofetch
     networkmanager
     network-manager-applet
